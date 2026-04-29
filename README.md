@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Life Tracker Pro
 
 Flutter project for mobile app development. Personal tracker + group/team tracker.
@@ -40,3 +41,7 @@ cd backend
 npm install
 npm start
 ```
+=======
+# life-manager
+доход-расход. заметки
+>>>>>>> a306d64273dac8e56a8e612bc8d08210ebd26c85
