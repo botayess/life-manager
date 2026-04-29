@@ -121,7 +121,7 @@ class DashboardScreen extends StatelessWidget {
                                 value: plan.done,
                                 onChanged: (v) =>
                                     state.togglePlan(plan.id, v ?? false),
-                                title: Text(plan.title),
+                                title: Text(plan.title ?? "Без названия"),
                               ),
                             ),
                       ],
