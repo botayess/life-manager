@@ -61,9 +61,7 @@ class DashboardScreen extends StatelessWidget {
               },
             ),
           ),
-
           const SizedBox(height: 18),
-
           LayoutBuilder(
             builder: (context, constraints) {
               final wide = constraints.maxWidth > 900;
@@ -95,9 +93,7 @@ class DashboardScreen extends StatelessWidget {
               );
             },
           ),
-
           const SizedBox(height: 18),
-
           LayoutBuilder(
             builder: (context, constraints) {
               final wide = constraints.maxWidth > 900;
@@ -113,7 +109,7 @@ class DashboardScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Фокус на сегодня',
+                        Text('Фокус на сегодня 🎯',
                             style: Theme.of(context)
                                 .textTheme
                                 .titleLarge
@@ -146,8 +142,7 @@ class DashboardScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding:
-              const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100),
             color: Colors.white.withOpacity(0.75),
@@ -163,8 +158,7 @@ class DashboardScreen extends StatelessWidget {
               ?.copyWith(fontWeight: FontWeight.w900),
         ),
         const SizedBox(height: 14),
-        const Text(
-            'Привычки, финансы, планы и команда — теперь вместе.'),
+        const Text('Привычки, финансы, планы и команда — теперь вместе.'),
       ],
     );
   }
@@ -217,8 +211,8 @@ class _StatCard extends StatelessWidget {
           Text(title),
           const SizedBox(height: 8),
           Text(value,
-              style: const TextStyle(
-                  fontSize: 20, fontWeight: FontWeight.bold)),
+              style:
+                  const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
         ],
       ),
     );
