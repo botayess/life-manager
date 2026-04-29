@@ -1,3 +1,4 @@
+// Erke: handles finance logic and transactions
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -47,13 +48,18 @@ class _FinanceScreenState extends State<FinanceScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Финансы и бюджет',
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall
-                ?.copyWith(fontWeight: FontWeight.w900),
-          ),
-          const SizedBox(height: 8),
+  'Финансы и бюджет',
+  style: Theme.of(context)
+      .textTheme
+      .headlineSmall
+      ?.copyWith(fontWeight: FontWeight.w900),
+),
+const SizedBox(height: 6),
+Text(
+  'Доходтар мен шығындарды бақылау бөлімі',
+  style: Theme.of(context).textTheme.bodyMedium,
+),
+const SizedBox(height: 12),
 
           Wrap(
             spacing: 8,
