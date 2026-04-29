@@ -175,7 +175,7 @@ const SizedBox(height: 12),
                                 _categoryController.text = 'Общее';
                               },
                               icon: const Icon(Icons.add_card),
-                              label: const Text('Добавить в бюджет'),
+                              label: const Text('Добавить операцию'),
                             ),
                           ),
                         ],
