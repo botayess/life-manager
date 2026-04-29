@@ -15,13 +15,7 @@ class SettingsScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Настройки и поддержка',
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineSmall
-                  ?.copyWith(fontWeight: FontWeight.w900)),
-          Text('App settings and preferences'),
-          const SizedBox(height: 10),
+          Text('Настройки и поддержка', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
           const SizedBox(height: 18),
           SectionCard(
             child: Column(
@@ -29,8 +23,7 @@ class SettingsScreen extends StatelessWidget {
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   title: const Text('Язык интерфейса'),
-                  subtitle: Text(
-                      state.language == AppLanguage.ru ? 'Русский' : 'English'),
+                  subtitle: Text(state.language == AppLanguage.ru ? 'Русский' : 'English'),
                   trailing: FilledButton(
                     onPressed: state.toggleLanguage,
                     child: const Text('RU / EN'),
@@ -45,8 +38,7 @@ class SettingsScreen extends StatelessWidget {
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
                   title: const Text('Уведомления'),
-                  subtitle:
-                      const Text('Базовая настройка уведомлений работает'),
+                  subtitle: const Text('Базовая настройка уведомлений работает'),
                   value: state.notificationsEnabled,
                   onChanged: state.toggleNotifications,
                 ),
@@ -59,8 +51,7 @@ class SettingsScreen extends StatelessWidget {
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
                   title: const Text('Поддержка в приложении'),
-                  subtitle:
-                      const Text('Показывает, что служба поддержки активна'),
+                  subtitle: const Text('Показывает, что служба поддержки активна'),
                   value: state.supportChatEnabled,
                   onChanged: state.toggleSupportChat,
                 ),
@@ -83,19 +74,13 @@ class SettingsScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Профиль',
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleLarge
-                                ?.copyWith(fontWeight: FontWeight.w800)),
+                        Text('Профиль', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800)),
                         const SizedBox(height: 12),
                         ListTile(
                           contentPadding: EdgeInsets.zero,
-                          leading: const CircleAvatar(
-                              child: Icon(Icons.person_outline)),
+                          leading: const CircleAvatar(child: Icon(Icons.person_outline)),
                           title: Text(state.currentUserName),
-                          subtitle: const Text(
-                              'Студент / пользователь Life Tracker Pro'),
+                          subtitle: const Text('Студент / пользователь Life Tracker Pro'),
                         ),
                         const SizedBox(height: 12),
                         FilledButton.icon(
@@ -110,26 +95,18 @@ class SettingsScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(state.t('support'),
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleLarge
-                                ?.copyWith(fontWeight: FontWeight.w800)),
+                        Text(state.t('support'), style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800)),
                         const SizedBox(height: 12),
                         const Text('Email: support@lifetracker.local'),
                         const SizedBox(height: 8),
                         const Text('Telegram: @life_tracker_support'),
                         const SizedBox(height: 8),
-                        Text(state.supportChatEnabled
-                            ? 'Статус: поддержка активна'
-                            : 'Статус: поддержка выключена'),
+                        Text(state.supportChatEnabled ? 'Статус: поддержка активна' : 'Статус: поддержка выключена'),
                         const SizedBox(height: 12),
                         OutlinedButton.icon(
                           onPressed: () {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                  content: Text(
-                                      'Запрос в поддержку успешно отправлен.')),
+                              const SnackBar(content: Text('Запрос в поддержку успешно отправлен.')),
                             );
                           },
                           icon: const Icon(Icons.support_agent),

@@ -1,4 +1,3 @@
-// Bota: main app entry
 import 'package:flutter/material.dart';
 
 import 'core/app_state.dart';
@@ -46,8 +45,7 @@ class _LifeTrackerAppState extends State<LifeTrackerApp> {
       themeMode: state.themeMode,
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFF7C8CF8), brightness: Brightness.light),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF7C8CF8), brightness: Brightness.light),
         scaffoldBackgroundColor: const Color(0xFFF6F7FB),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(18)),
@@ -57,8 +55,7 @@ class _LifeTrackerAppState extends State<LifeTrackerApp> {
       ),
       darkTheme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFF97A3FF), brightness: Brightness.dark),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF97A3FF), brightness: Brightness.dark),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(18)),
           filled: true,
@@ -66,9 +63,7 @@ class _LifeTrackerAppState extends State<LifeTrackerApp> {
       ),
       home: AnimatedSwitcher(
         duration: const Duration(milliseconds: 300),
-        child: state.isLoggedIn
-            ? AppShell(state: state)
-            : AuthScreen(state: state),
+        child: state.isLoggedIn ? AppShell(state: state) : AuthScreen(state: state),
       ),
     );
   }

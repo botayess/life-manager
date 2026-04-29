@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+// Erke: handles finance logic and transactions
+=======
+>>>>>>> 67d6875 (first commit)
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -47,6 +51,20 @@ class _FinanceScreenState extends State<FinanceScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
+<<<<<<< HEAD
+  'Финансы и бюджет',
+  style: Theme.of(context)
+      .textTheme
+      .headlineSmall
+      ?.copyWith(fontWeight: FontWeight.w900),
+),
+const SizedBox(height: 6),
+Text(
+  'Доходтар мен шығындарды бақылау бөлімі',
+  style: Theme.of(context).textTheme.bodyMedium,
+),
+const SizedBox(height: 12),
+=======
             'Финансы и бюджет',
             style: Theme.of(context)
                 .textTheme
@@ -54,6 +72,7 @@ class _FinanceScreenState extends State<FinanceScreen> {
                 ?.copyWith(fontWeight: FontWeight.w900),
           ),
           const SizedBox(height: 8),
+>>>>>>> 67d6875 (first commit)
 
           Wrap(
             spacing: 8,
@@ -169,7 +188,11 @@ class _FinanceScreenState extends State<FinanceScreen> {
                                 _categoryController.text = 'Общее';
                               },
                               icon: const Icon(Icons.add_card),
+<<<<<<< HEAD
+                              label: const Text('Добавить операцию'),
+=======
                               label: const Text('Добавить в бюджет'),
+>>>>>>> 67d6875 (first commit)
                             ),
                           ),
                         ],
